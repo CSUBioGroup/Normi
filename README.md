@@ -9,8 +9,8 @@ We introduce Normi, a gene regulatory network (GRN) inference method based on no
 numpy==1.23.5
 <br />pandas==1.5.3
 <br />scipy==1.10.0
-<br />scikit-learn=1.2.1
-<br />dcor=0.6<br />
+<br />scikit-learn==1.2.1
+<br />dcor==0.6<br />
 
 ## Tutorial
 We provide tutorial as shown in {demo.ipynb} for introducing the usage of Normi.
@@ -18,7 +18,6 @@ We provide tutorial as shown in {demo.ipynb} for introducing the usage of Normi.
 ## Usage
 Normi takes data as input file in csv (genes in columns and cells in rows)(e.g. [ExpressionData.csv](https://github.com/CSUBioGroup/Normi/files/12066810/ExpressionData.csv))
 , and it needs an input file containing time information (e.g. [PseudoTime.csv](https://github.com/CSUBioGroup/Normi/files/12066811/PseudoTime.csv)). The output of Normi is a file in csv with edges sorted in descending order by estimated mutual information.
-<br />We also provide default hyper-parameters in main.py, Using -h option to see more.
 
 Command to run Normi
 
@@ -26,3 +25,4 @@ Command to run Normi
 ```
 python main.py --data_file <scGNA-seq path> --time_file <time path> --tf_file <tf list path> --save_dir <output path> --window_size <window size> --slide <sliding length> --n_jobs <n_jobs>
 ```
+<br />We also provide default hyper-parameters in main.py, Using -h option to see more.
